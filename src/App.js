@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useMemo} from 'react';
 import './App.css';
 
 const useAnyKeyToRender = () => {
@@ -16,6 +16,8 @@ function WordCount ({children = ""}) {
   //랜더링 강제화
   useAnyKeyToRender();
   const words = useMemo(()=>{
+    console.log(`children.split 재 계산`)
+
     return children.split(" ");
   }, []);
   
@@ -40,5 +42,5 @@ function App() {
     </WordCount>
   );
 }
-//기업해 높은. cache. 성능향상.
+//기억해 높은. cache. 성능향상.
 export default App;
