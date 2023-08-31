@@ -1,7 +1,7 @@
-import { useFetch } from "../../hooks/useFetch";
+import { useFetch } from "hooks/useFetch";
 
 
-export default function Fetch({uri, renderSuccess, 
+export function Fetch ({uri, renderSuccess,
     loadingFallBack = <p>loading...</p>},
     renderError = ({err}) => (<pre>{JSON.stringify(err, null, 2)}</pre>)) {
     const {loading, data , error} = useFetch(uri);

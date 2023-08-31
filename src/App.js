@@ -5,12 +5,18 @@ import { faker } from "@faker-js/faker";
 import P240Windowing from './App_p240FixSizeList';
 import LoadByFetchHooks from "./App_p242_LoadByFetchHooks"
 import { useIterator } from './hooks/useIterator';
-import RepoItem from './component/RepoMenu';
+import RepoItem from './component/RepoItem';
+import GitUserRepositories from './component/GitUserRepositories';
+import GitUserByFetch from './component/GitUserByFetch';
 
 function App() {
+    return (<GitUserByFetch loginId={"moonhighway"}/>)
+    
+    //(<GitUserRepositories loginId={"moonhighway"}/>)
 
-    const items = ['aaa', 'bbb'];
-    return <RepoItem repositories={items}/>
+
+    //const items = ['aaa', 'bbb'];
+    //return <RepoItem repositories={items}/>
 
     //const items = ['a', 'b', 'c'];
     //const {item, prev, next} = useIterator(items);

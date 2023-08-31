@@ -1,4 +1,5 @@
-import Fetch from "./toolbox/Fetch";
+import GitUserRepositories from "./GitUserRepositories";
+import { Fetch } from "./toolbox/Fetch";
 
 export default function GitUserByFetch({loginId}) {
   const uri = `https://api.github.com/users/${loginId}`;
@@ -15,5 +16,6 @@ export default function GitUserByFetch({loginId}) {
         {data.name && <p>{data.name}</p>}
         {data.location && <p>{data.location}</p>}
       </div>
+      <GitUserRepositories loginId={data.login}/>
     </div>);
 }
