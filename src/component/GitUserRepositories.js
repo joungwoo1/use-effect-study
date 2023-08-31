@@ -1,5 +1,5 @@
 import React from 'react'
-import RepoItem from './RepoItem';
+import RepoItem from './RepoMenu';
 import { Fetch } from './toolbox/Fetch';
 
 function GitUserRepositories({loginId,

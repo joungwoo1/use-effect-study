@@ -11,8 +11,9 @@ export default function RepoItem({repositories, onSelect = (f) => f}) {
         onSelect(item);
     }, [item]);
 
-    if(!repositories || repositories.length === 0)
-    return <></>;
+    if(!repositories || repositories.length === 0){
+    return <> empty</>;
+    }
 
     return (<div style={{display: "flex"}}>
         <button onClick={prev}>&lt;</button>
