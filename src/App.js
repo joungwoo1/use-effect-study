@@ -10,10 +10,10 @@ import GitUserRepositories from './component/GitUserRepositories';
 import GitUserByFetch from './component/GitUserByFetch';
 
 function App() {
-    return (<GitUserByFetch loginId={"ivarbae"}/>)
+    return (<GitUserByFetch loginId={"moonhighway"}/>)
     
     //(<GitUserRepositories loginId={"moonhighway"}/>)
-
+    //ivarbae : 레포 빈아이디
 
     //const items = ['aaa', 'bbb'];
     //return <RepoItem repositories={items}/>
@@ -22,14 +22,8 @@ function App() {
     //const {item, prev, next} = useIterator(items);
     //return (<P240Windowing/>)
     //return (<LoadByFetchHooks/>)
-    /*
-    return (<>
-      <p>{item}</p>
-      <button onClick={prev}>Prev</button>
-      <button onClick={next}>Next</button>
-      </>
-    )
-    */
+
+    
 }
 
 export default App;

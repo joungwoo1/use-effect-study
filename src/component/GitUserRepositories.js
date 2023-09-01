@@ -9,7 +9,7 @@ function GitUserRepositories({loginId,
     const uri = `https://api.github.com/users/${loginId}/repos`;
     return <Fetch uri={uri} renderSuccess={
         (rapositoyInfo)=>{
-        return <RepoItem repositories={rapositoyInfo.data} onSelect={onSelect}></RepoItem>
+        return <RepoItem loginId={loginId} repositories={rapositoyInfo.data} onSelect={onSelect}></RepoItem>
         }} />;
         
 }
